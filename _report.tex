@@ -1,0 +1,53 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage{_macros-ohp}
+\usepackage{blindtext}
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage{xfrac}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[section]{placeins}
+\graphicspath{ {./imgs/} }
+
+%Please make sure the tex is compiled twice to have all the background images displayed correctly.
+
+%Hyperref needs to be the last package imported
+\usepackage{hyperref}
+
+\setlength{\headheight}{14pt}
+\setlength{\parindent}{0pt}
+\linespread{1.5}
+
+\begin{document}
+
+	\begin{titlepage}
+	\tikz[remember picture,overlay] \node[opacity=1,inner sep=0pt] at (current page.center){\includegraphics[width=\paperwidth,height=\paperheight]{imgs/SEBTitlePage.png}};
+	\end{titlepage}
+	
+	\tableofcontents
+	\newpage
+	
+	\section{Introduction}
+	\input{introduction.tex}
+	\newpage
+	
+	\section{Abstract}
+	\input{abstract.tex}
+	\newpage
+	
+	\section{Systems Architecture Overview}
+	\input{architecture.tex}
+	\newpage
+	
+	\section{Mission Concept of Operations Overview}
+	\input{operations.tex}
+	\newpage
+	
+	\section{Flight Report}
+	\input{flight.tex}
+	\newpage
+	
+	\section{Conclusions and Lessons Learned}
+	\input{conclusions.tex}
+	\newpage
+\end{document}
